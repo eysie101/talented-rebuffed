@@ -1004,7 +1004,7 @@ do
 		if not talents[index] then
 			return 0, index
 		else
-			return tmpl[index], index + 1
+			return tmpl[index] or 0, index + 1
 		end
 	end
 
@@ -1029,7 +1029,8 @@ do
 		for tab, talents in ipairs(info) do
 			local tmpl = template[tab]
 			local index = 1
-			while index <= #tmpl do
+			-- Rebuffed: bounded by the class's tree; a template tree longer than the class's never ended this loop
+			while index <= #talents do
 				local r1, r2
 				r1, index = get_next_valid_index(tmpl, index, talents)
 				r2, index = get_next_valid_index(tmpl, index, talents)

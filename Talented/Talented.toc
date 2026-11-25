@@ -2,7 +2,7 @@
 ## Title: Talented Rebuffed
 ## Notes: Rebuffed talent template editor, five talent specializations.
 ## Author: Jerry (Kader Edition)
-## Version: v2.5.1
+## Version: v2.5.2
 ## OptionalDeps: Ace3
 ## SavedVariables: TalentedDB
 ## LoadManagers: Talented_Loader AddonLoader
